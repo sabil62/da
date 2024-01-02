@@ -1,0 +1,68 @@
+
+--3PL RMS Qatar missing Adjustments
+
+select 
+BRAND_CODE,
+COUNTRY,
+LEGACY_WH,
+LEGACY_ITEM,
+ADJ_DATE,
+REASON_CODE,
+ADJ_QTY,
+USERID,
+nvl(RMS_ITEM,'-999') RMS_ITEM,
+nvl(RMS_LOC,'-999') RMS_LOC,
+nvl(RMS_ADJ_QTY,'-999') RMS_ADJ_QTY,
+nvl(RMS_ADJ_CODE,'-999') RMS_ADJ_CODE,
+RMS_ADJ_DATE,
+MATCH_STATUS
+from ALS_OBS_3PL_RMS_ADJ_VW
+where country='Qatar' and
+(match_status= 'Missing in RMS' 
+or match_status= 'QTY MISMATCH');
+
+
+--3PL RMS Oman missing Adjustments
+
+select 
+BRAND_CODE,
+COUNTRY,
+LEGACY_WH,
+LEGACY_ITEM,
+ADJ_DATE,
+REASON_CODE,
+ADJ_QTY,
+USERID,
+nvl(RMS_ITEM,'-999') RMS_ITEM,
+nvl(RMS_LOC,'-999') RMS_LOC,
+nvl(RMS_ADJ_QTY,'-999') RMS_ADJ_QTY,
+nvl(RMS_ADJ_CODE,'-999') RMS_ADJ_CODE,
+RMS_ADJ_DATE,
+MATCH_STATUS
+from ALS_OBS_3PL_RMS_ADJ_VW
+where country='Oman' and
+(match_status= 'Missing in RMS' 
+or match_status= 'QTY MISMATCH');
+
+
+--3PL RMS Morocco missing Adjustments
+
+select 
+BRAND_CODE,
+COUNTRY,
+LEGACY_WH,
+LEGACY_ITEM,
+ADJ_DATE,
+REASON_CODE,
+ADJ_QTY,
+USERID,
+nvl(RMS_ITEM,'-999') RMS_ITEM,
+nvl(RMS_LOC,'-999') RMS_LOC,
+nvl(RMS_ADJ_QTY,'-999') RMS_ADJ_QTY,
+nvl(RMS_ADJ_CODE,'-999') RMS_ADJ_CODE,
+RMS_ADJ_DATE,
+MATCH_STATUS
+from ALS_OBS_3PL_RMS_ADJ_VW
+where country='Morocco' and
+(match_status= 'Missing in RMS' 
+or match_status= 'QTY MISMATCH');
